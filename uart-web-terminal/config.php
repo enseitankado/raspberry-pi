@@ -2,9 +2,8 @@
 	define('SERIAL_DEVICE', '/dev/serial0');
 	define('MAX_LOG_LINE', 50);
 	
-	// Basic http authentication
-	define('PHP_AUTH_USER', 'pi');
-	define('PHP_AUTH_PW', 'raspberry');
+	// Valid users
+	$valid_passwords = array ("pi" => "raspberry");
 
 	
 	// ***************************************************

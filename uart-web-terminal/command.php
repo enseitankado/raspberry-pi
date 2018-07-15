@@ -8,8 +8,10 @@
 			if (isset($_GET['cmd']))
 				$cmd = $_GET['cmd'];
 			
-			if (!empty($cmd))			
-				exec('echo "'.strtolower($cmd).'" > '.SERIAL_DEVICE);
+			if (!empty($cmd)) {
+				$cmd = 'echo "'.strtolower($cmd).'" > '.SERIAL_DEVICE;				
+				exec($cmd);
+			}
 		?>
 		<form style="display: flex;">
 			<input name='cmd' placeholder="Enter ASCII Command" style="flex-grow: 1;">&nbsp;&nbsp;
