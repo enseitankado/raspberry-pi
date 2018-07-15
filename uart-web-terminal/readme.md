@@ -2,6 +2,9 @@
 
 Monitors local UART (serial) ports to a web page and interact with it by ASCII commands.
 
+![White theme](screenshot2.jpg)
+![Black theme](screenshot1.jpg)
+
 ## Installing
 
 1) For example on raspberry pi excute commands below to install apache and php.
