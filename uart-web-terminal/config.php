@@ -1,5 +1,6 @@
 <?php
 	define('SERIAL_DEVICE', '/dev/serial0');
+	define('BAUD_RATE', '115200');	
 	define('MAX_LOG_LINE', 50);
 	
 	// Valid users

@@ -8,7 +8,7 @@
         <meta http-equiv="refresh" content="1" />
     </head>
     <body>
-	<div style="height:5%; color:white;"><b>Monitoring:</b> <?php echo SERIAL_DEVICE ?></div>
+	<div style="height:5%; color:white;"><b>Monitoring:</b> <?php echo SERIAL_DEVICE.' at '.BAUD_RATE.' baud'; ?></div>
 	<div style="height:95%">
 	<textarea id="log_area" style="width:100%; height:100%; align: bottom; background-color: black; color: #00FFFF;">
 	<?php		

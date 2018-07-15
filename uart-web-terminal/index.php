@@ -16,7 +16,7 @@ include('config.php');
 require('auth.php');
 
 # initialize UART(serial0) at 115200 baud and other parameters
-exec("/bin/stty -F ".SERIAL_DEVICE." 115200 -brkint -icrnl -imaxbel -opost -onlcr -isig -icanon -echo");
+exec("/bin/stty -F ".SERIAL_DEVICE." ".BAUD_RATE." -brkint -icrnl -imaxbel -opost -onlcr -isig -icanon -echo");
 ?>
 <html>
 	<head>
