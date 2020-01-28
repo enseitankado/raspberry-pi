@@ -1,8 +1,8 @@
-#!/bin/bash
+﻿#!/bin/bash
 
 # CHANGE THESE
 auth_email=""
-auth_key="" # found in cloudflare account settings
+auth_key=""
 zone_name=""
 record_name=""
 
