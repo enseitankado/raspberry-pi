@@ -1,0 +1,73 @@
+[
+    {
+        "id": "791eb3a7.e2c0dc",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "5d4cef6b.8e14a",
+        "type": "catch",
+        "z": "791eb3a7.e2c0dc",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 580,
+        "y": 220,
+        "wires": [
+            [
+                "861d5f13.08f0f"
+            ]
+        ]
+    },
+    {
+        "id": "521630ed.36e6",
+        "type": "function",
+        "z": "791eb3a7.e2c0dc",
+        "name": "Hata mesaji yayınla",
+        "func": "node.error(\"Örnek hata mesaji\", msg);   ",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 830,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "861d5f13.08f0f",
+        "type": "debug",
+        "z": "791eb3a7.e2c0dc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "error",
+        "targetType": "msg",
+        "x": 800,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "114f618b.77793e",
+        "type": "inject",
+        "z": "791eb3a7.e2c0dc",
+        "name": "Hatayı tetikle",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 610,
+        "y": 100,
+        "wires": [
+            [
+                "521630ed.36e6"
+            ]
+        ]
+    }
+]
