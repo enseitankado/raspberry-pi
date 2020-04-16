@@ -1,0 +1,107 @@
+[
+    {
+        "id": "f5b15e5c.6741",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "e88c074a.a355a8",
+        "type": "inject",
+        "z": "f5b15e5c.6741",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 1010,
+        "y": 70,
+        "wires": [
+            [
+                "ec7b228.e7036e"
+            ]
+        ]
+    },
+    {
+        "id": "ec7b228.e7036e",
+        "type": "function",
+        "z": "f5b15e5c.6741",
+        "name": "Rasgele hata üret",
+        "func": "node.error(Math.random(), msg);",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1280,
+        "y": 70,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "224f7788.e71408",
+        "type": "catch",
+        "z": "f5b15e5c.6741",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 990,
+        "y": 220,
+        "wires": [
+            [
+                "e9e8fe4b.8d93a"
+            ]
+        ]
+    },
+    {
+        "id": "ee1c5185.3ae87",
+        "type": "debug",
+        "z": "f5b15e5c.6741",
+        "name": "Akış 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1300,
+        "y": 270,
+        "wires": []
+    },
+    {
+        "id": "e9e8fe4b.8d93a",
+        "type": "function",
+        "z": "f5b15e5c.6741",
+        "name": "Karşılaştır",
+        "func": "msg_val = msg.error.message;\n\nif ( parseFloat( msg_val ) < 0.5 ) {\n    msg.payload =  msg_val + \", 0.5 den KUCUK.\";\n    return [null, msg];\n} else {\n    msg.payload = msg_val + \", 0.5 den BUYUK.\";\n    return [msg, null];\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 1150,
+        "y": 220,
+        "wires": [
+            [
+                "331d0c6a.a023b4"
+            ],
+            [
+                "ee1c5185.3ae87"
+            ]
+        ]
+    },
+    {
+        "id": "331d0c6a.a023b4",
+        "type": "debug",
+        "z": "f5b15e5c.6741",
+        "name": "Akış 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1300,
+        "y": 170,
+        "wires": []
+    }
+]
